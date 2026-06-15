@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>siiriri_cariblanco</title>
+
+    <link rel="stylesheet" href="../../css/ficha.css">
+
+</head>
+
+<body>
+
+    <button class="volver"
+    onclick="window.location.href='../patos.html'">
+
+        ← Volver
+
+    </button>
+
+    <div class="tarjeta">
+
+        <div class="hero">
+
+            <img src="../../imagenes/patos/siriri_cariblanco.jpg"
+            alt="pato siiriri_cariblanco">
+
+            <div class="overlay">
+
+                <h1>Siriri Cariblanco</h1>
+            
+
+<div class="calificacion">
+
+    <span class="estrella" onclick="calificar(1)">☆</span>
+    <span class="estrella" onclick="calificar(2)">☆</span>
+    <span class="estrella" onclick="calificar(3)">☆</span>
+    <span class="estrella" onclick="calificar(4)">☆</span>
+    <span class="estrella" onclick="calificar(5)">☆</span>
+
+</div>
+
+<p id="resultado">
+    Califica esta especie
+</p>
+
+            </div>
+
+        </div>
+
+        <div class="info">
+
+            <div class="bloque">
+
+                <h2>🌎 País de origen</h2>
+
+                <p>
+                 Distribución natural en América y África
+                </p>
+
+            </div>
+
+            <div class="bloque">
+
+                <h2>📖 Historia</h2>
+
+                <p>
+                Es un pato silvestre muy común en zonas húmedas de América del Sur. 
+                Se caracteriza por su cara blanca y cuerpo oscuro. Vive en lagunas, pantanos y ríos.
+                </p>
+
+            </div>
+
+            <div class="bloque">
+
+                <h2>✨ Datos curiosos</h2>
+
+                <ul>
+
+                    <li>
+                    Es un pato silbador (no grazna como otros patos).   
+                    </li>
+
+                    <li>
+                    Vive en grandes grupos en zonas húmedas. 
+                    </li>
+
+                </ul>
+
+            </div>
+            <div class="bloque">
+
+    <h2>📸 Ejemplares de nuestra granja</h2>
+
+    <div class="galeria">
+
+        <img src="../../imagenes/galeria/sirir_cariblanco/sirir_cariblanco1.jpg"
+        alt="Macho">
+
+        <img src="../../imagenes/galeria/sirir_cariblanco/siriri_cariblanco2.jpg"
+        alt="Hembra">
+
+
+    </div>
+
+</div>
+
+            <div class="bloque">
+
+                <h2>⭐ Calificación de visitantes</h2>
+
+                <div class="estrellas">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <p>
+                    Esta especie es una de las favoritas de los visitantes de
+                    La Granja de Gregori.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+
+function calificar(valor){
+
+    const estrellas = document.querySelectorAll('.estrella');
+
+    estrellas.forEach((estrella,index)=>{
+
+        if(index < valor){
+
+            estrella.textContent = '★';
+
+        }else{
+
+            estrella.textContent = '☆';
+
+        }
+
+    });
+
+    document.getElementById("resultado").innerText =
+    "Tu calificación: " + valor + " estrellas";
+
+}
+
+</script>
+
+</body>
+
+</html>

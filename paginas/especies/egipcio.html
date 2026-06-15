@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>egipcio</title>
+
+    <link rel="stylesheet" href="../../css/ficha.css">
+
+</head>
+
+<body>
+
+    <button class="volver"
+    onclick="window.location.href='../patos.html'">
+
+        ← Volver
+
+    </button>
+
+    <div class="tarjeta">
+
+        <div class="hero">
+
+            <img src="../../imagenes/patos/egipcio.jpg"
+            alt="pato egipcio">
+
+            <div class="overlay">
+
+                <h1>Egipcio</h1>
+            
+
+<div class="calificacion">
+
+    <span class="estrella" onclick="calificar(1)">☆</span>
+    <span class="estrella" onclick="calificar(2)">☆</span>
+    <span class="estrella" onclick="calificar(3)">☆</span>
+    <span class="estrella" onclick="calificar(4)">☆</span>
+    <span class="estrella" onclick="calificar(5)">☆</span>
+
+</div>
+
+<p id="resultado">
+    Califica esta especie
+</p>
+
+            </div>
+
+        </div>
+
+        <div class="info">
+
+            <div class="bloque">
+
+                <h2>🌎 País de origen</h2>
+
+                <p>
+                  Asia (India y Sudeste Asiático)
+                </p>
+
+            </div>
+
+            <div class="bloque">
+
+                <h2>📖 Historia</h2>
+
+                <p>
+                Es una raza antigua representada en arte egipcio.
+                 Se cree que fue domesticada hace miles de años en el valle del Nilo.
+                  Es un pato elegante y de porte alargado.
+                </p>
+
+            </div>
+
+            <div class="bloque">
+
+                <h2>✨ Datos curiosos</h2>
+
+                <ul>
+
+                    <li>
+                    Es una de las razas de pato más antiguas conocidas.    
+                    </li>
+
+                    <li>
+                    Su postura es más erguida que la de otros patos.
+                    </li>
+
+                </ul>
+
+            </div>
+            <div class="bloque">
+
+    <h2>📸 Ejemplares de nuestra granja</h2>
+
+    <div class="galeria">
+
+        <img src="../../imagenes/galeria/egipcio/egipcio.jpg"
+        alt="Macho">
+
+        <img src="../../imagenes/galeria/egipcio/egipcio2.jpg"
+        alt="Hembra">
+
+
+    </div>
+
+</div>
+
+            <div class="bloque">
+
+                <h2>⭐ Calificación de visitantes</h2>
+
+                <div class="estrellas">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <p>
+                    Esta especie es una de las favoritas de los visitantes de
+                    La Granja de Gregori.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+
+function calificar(valor){
+
+    const estrellas = document.querySelectorAll('.estrella');
+
+    estrellas.forEach((estrella,index)=>{
+
+        if(index < valor){
+
+            estrella.textContent = '★';
+
+        }else{
+
+            estrella.textContent = '☆';
+
+        }
+
+    });
+
+    document.getElementById("resultado").innerText =
+    "Tu calificación: " + valor + " estrellas";
+
+}
+
+</script>
+
+</body>
+
+</html>

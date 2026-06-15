@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cochin</title>
+
+    <link rel="stylesheet" href="../../css/ficha.css">
+
+</head>
+
+<body>
+
+    <button class="volver"
+    onclick="window.location.href='../gallinas.html'">
+
+        ← Volver
+
+    </button>
+
+    <div class="tarjeta">
+
+        <div class="hero">
+
+            <img src="../../imagenes/gallinas/cochin.jpg"
+            alt="Gallina Cochin">
+
+            <div class="overlay">
+
+                <h1>Cochin</h1>
+
+<div class="calificacion">
+
+    <span class="estrella" onclick="calificar(1)">☆</span>
+    <span class="estrella" onclick="calificar(2)">☆</span>
+    <span class="estrella" onclick="calificar(3)">☆</span>
+    <span class="estrella" onclick="calificar(4)">☆</span>
+    <span class="estrella" onclick="calificar(5)">☆</span>
+
+</div>
+
+<p id="resultado">
+    Califica esta especie
+</p>
+
+            </div>
+
+        </div>
+
+        <div class="info">
+
+            <div class="bloque">
+
+                <h2>🌎 País de origen</h2>
+
+                <p>
+                     China
+                </p>
+
+            </div>
+
+            <div class="bloque">
+
+                <h2>📖 Historia</h2>
+
+                <p>
+               Originaria de China, la Cochin fue llevada a 
+               Europa en el siglo XIX, donde causó sensación 
+               por su gran tamaño y abundante plumaje. 
+               Es una raza muy dócil y ampliamente usada como ornamental.
+                </p>
+
+            </div>
+
+            <div class="bloque">
+
+                <h2>✨ Datos curiosos</h2>
+
+                <ul>
+
+                    <li>
+                    Tiene plumas hasta en las patas, 
+                    lo que la hace parecer “esponjosa”.  
+                    </li>
+
+                    <li>
+                    Es una de las gallinas más tranquilas y dóciles
+                    </li>
+
+                </ul>
+
+            </div>
+            <div class="bloque">
+
+    <h2>📸 Ejemplares de nuestra granja</h2>
+
+    <div class="galeria">
+
+        <img src="../../imagenes/galeria/cochin/cochin1.jpg"
+        alt="cochin 1">
+
+        <img src="../../imagenes/galeria/cochin/cochin2.jpg"
+        alt="cochin 2">
+
+        <img src="../../imagenes/galeria/cochin/cochin3.jpg"
+        alt="cochin 3">
+
+        <img src="../../imagenes/galeria/cochin/cochin4.jpg"
+        alt="cochin 4">
+
+    </div>
+
+</div>
+
+            <div class="bloque">
+
+                <h2>⭐ Calificación de visitantes</h2>
+
+                <div class="estrellas">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <p>
+                    Esta especie es una de las favoritas de los visitantes de
+                    La Granja de Gregori.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+
+function calificar(valor){
+
+    const estrellas = document.querySelectorAll('.estrella');
+
+    estrellas.forEach((estrella,index)=>{
+
+        if(index < valor){
+
+            estrella.textContent = '★';
+
+        }else{
+
+            estrella.textContent = '☆';
+
+        }
+
+    });
+
+    document.getElementById("resultado").innerText =
+    "Tu calificación: " + valor + " estrellas";
+
+}
+
+</script>
+
+</body>
+
+</html>

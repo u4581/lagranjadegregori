@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>mandarin</title>
+
+    <link rel="stylesheet" href="../../css/ficha.css">
+
+</head>
+
+<body>
+
+    <button class="volver"
+    onclick="window.location.href='../patos.html'">
+
+        ← Volver
+
+    </button>
+
+    <div class="tarjeta">
+
+        <div class="hero">
+
+            <img src="../../imagenes/patos/mandarin.jpg"
+            alt="patos mandarin">
+
+            <div class="overlay">
+
+                <h1>Mandarin</h1>
+            
+
+<div class="calificacion">
+
+    <span class="estrella" onclick="calificar(1)">☆</span>
+    <span class="estrella" onclick="calificar(2)">☆</span>
+    <span class="estrella" onclick="calificar(3)">☆</span>
+    <span class="estrella" onclick="calificar(4)">☆</span>
+    <span class="estrella" onclick="calificar(5)">☆</span>
+
+</div>
+
+<p id="resultado">
+    Califica esta especie
+</p>
+
+            </div>
+
+        </div>
+
+        <div class="info">
+
+            <div class="bloque">
+
+                <h2>🌎 País de origen</h2>
+
+                <p>
+                Asia (China, Japón y Rusia)
+                </p>
+
+            </div>
+
+            <div class="bloque">
+
+                <h2>📖 Historia</h2>
+
+                <p>
+                Es uno de los patos más bellos del mundo, originario de Asia.
+                Fue símbolo de amor y fidelidad en la cultura china. 
+                Actualmente es muy popular en zoológicos y estanques ornamentales.
+                </p>
+
+            </div>
+
+            <div class="bloque">
+
+                <h2>✨ Datos curiosos</h2>
+
+                <ul>
+
+                    <li>
+                    El macho tiene colores muy llamativos, la hembra es más gris.  
+                    </li>
+
+                    <li>
+                    Es símbolo de pareja fiel en la cultura asiática.
+                    </li>
+
+                </ul>
+
+            </div>
+            <div class="bloque">
+
+    <h2>📸 Ejemplares de nuestra granja</h2>
+
+    <div class="galeria">
+
+        <img src="../../imagenes/galeria/mandarin/mandarin1.jpg"
+        alt="Macho">
+
+        <img src="../../imagenes/galeria/mandarin/mandarin2.jpg"
+        alt="Hembra">
+
+
+    </div>
+
+</div>
+
+            <div class="bloque">
+
+                <h2>⭐ Calificación de visitantes</h2>
+
+                <div class="estrellas">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <p>
+                    Esta especie es una de las favoritas de los visitantes de
+                    La Granja de Gregori.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+
+function calificar(valor){
+
+    const estrellas = document.querySelectorAll('.estrella');
+
+    estrellas.forEach((estrella,index)=>{
+
+        if(index < valor){
+
+            estrella.textContent = '★';
+
+        }else{
+
+            estrella.textContent = '☆';
+
+        }
+
+    });
+
+    document.getElementById("resultado").innerText =
+    "Tu calificación: " + valor + " estrellas";
+
+}
+
+</script>
+
+</body>
+
+</html>

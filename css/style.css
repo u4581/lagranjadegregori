@@ -1,0 +1,210 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    background:linear-gradient(
+        180deg,
+        #29512d 0%,
+        #3b6b40 35%,
+        #f4efe6 35%,
+        #f4efe6 100%
+    );
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+}
+
+.contenedor{
+    width:100%;
+    max-width:450px;
+}
+
+.logo-container{
+    display:flex;
+    justify-content:center;
+    margin-bottom:-60px;
+    z-index:10;
+    position:relative;
+
+    animation:aparecerLogo 1s ease;
+}
+
+.logo-container img{
+
+    width:240px;
+
+    border-radius:30px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.25);
+
+    transition:0.4s;
+}
+
+.logo-container img:hover{
+
+    transform:scale(1.05);
+}
+
+.tarjeta{
+
+    background:white;
+
+    border-radius:35px;
+
+    padding:
+    90px 30px 35px 30px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.15);
+
+    animation:aparecerTarjeta 1.2s ease;
+}
+
+.etiqueta{
+
+    display:inline-block;
+
+    background:#e8f3e9;
+
+    color:#29512d;
+
+    padding:8px 18px;
+
+    border-radius:20px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+}
+
+p{
+
+    color:#555;
+
+    line-height:1.7;
+
+    font-size:18px;
+}
+
+button{
+
+    margin-top:30px;
+
+    width:100%;
+
+    border:none;
+
+    border-radius:18px;
+
+    padding:18px;
+
+    background:linear-gradient(
+        135deg,
+        #29512d,
+        #3f7a45
+    );
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 10px 20px rgba(41,81,45,0.3);
+}
+
+.frase{
+
+    margin-top:25px;
+
+    color:#7a6240;
+
+    font-style:italic;
+
+    font-size:16px;
+}
+
+.estadisticas{
+
+    margin-top:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+    color:#29512d;
+
+    font-weight:600;
+
+    font-size:15px;
+}
+
+/* ========================= */
+/* ANIMACIONES */
+/* ========================= */
+
+@keyframes aparecerLogo {
+
+    from{
+        opacity:0;
+        transform:translateY(-20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes aparecerTarjeta {
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(max-width:768px){
+
+    .logo-container img{
+        width:200px;
+    }
+
+    p{
+        font-size:16px;
+    }
+
+    button{
+        font-size:18px;
+    }
+}

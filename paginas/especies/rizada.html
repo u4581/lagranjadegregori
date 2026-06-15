@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rizada</title>
+
+    <link rel="stylesheet" href="../../css/ficha.css">
+
+</head>
+
+<body>
+
+    <button class="volver"
+    onclick="window.location.href='../gallinas.html'">
+
+        ← Volver
+
+    </button>
+
+    <div class="tarjeta">
+
+        <div class="hero">
+
+            <img src="../../imagenes/gallinas/rizada.jpg"
+            alt="Gallina rizada">
+
+            <div class="overlay">
+
+                <h1>Rizada</h1>
+
+<div class="calificacion">
+
+    <span class="estrella" onclick="calificar(1)">☆</span>
+    <span class="estrella" onclick="calificar(2)">☆</span>
+    <span class="estrella" onclick="calificar(3)">☆</span>
+    <span class="estrella" onclick="calificar(4)">☆</span>
+    <span class="estrella" onclick="calificar(5)">☆</span>
+
+</div>
+
+<p id="resultado">
+    Califica esta especie
+</p>
+
+            </div>
+
+        </div>
+
+        <div class="info">
+
+            <div class="bloque">
+
+                <h2>🌎 País de origen</h2>
+
+                <p>
+                Asia (posiblemente China e India)
+                </p>
+
+            </div>
+
+            <div class="bloque">
+
+                <h2>📖 Historia</h2>
+
+                <p>
+                Las gallinas rizadas se originaron en Asia y 
+                luego fueron seleccionadas en Europa. 
+                Su característica principal es que las plumas
+                 crecen hacia afuera y se ven rizadas o encrespadas, 
+                 lo que les da una apariencia muy llamativa y ornamental.
+                </p>
+
+            </div>
+
+            <div class="bloque">
+
+                <h2>✨ Datos curiosos</h2>
+
+                <ul>
+
+                    <li>
+                    Su plumaje rizado no afecta su salud, 
+                solo es una mutación genética.
+                    </li>
+
+                    <li>
+                    Son muy populares en ferias y 
+                exposiciones por su apariencia “exótica”. 
+                    </li>
+
+                </ul>
+
+            </div>
+                 <h2>📸 Ejemplares de nuestra granja</h2>
+
+    <div class="galeria">
+
+        <img src="../../imagenes/galeria/rizada/rizada1.jpg"
+        alt="rizada 1">
+
+        <img src="../../imagenes/galeria/rizada/rizada2.jpg"
+        alt="rizada 2">
+
+        <img src="../../imagenes/galeria/rizada/rizada3.jpg"
+        alt="rizada 3">
+
+        <img src="../../imagenes/galeria/rizada/rizada4.jpg"
+        alt="rizada 4">
+
+    </div>
+
+</div>   
+
+            <div class="bloque">
+
+                <h2>⭐ Calificación de visitantes</h2>
+
+                <div class="estrellas">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <p>
+                    Esta especie es una de las favoritas de los visitantes de
+                    La Granja de Gregori.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+
+function calificar(valor){
+
+    const estrellas = document.querySelectorAll('.estrella');
+
+    estrellas.forEach((estrella,index)=>{
+
+        if(index < valor){
+
+            estrella.textContent = '★';
+
+        }else{
+
+            estrella.textContent = '☆';
+
+        }
+
+    });
+
+    document.getElementById("resultado").innerText =
+    "Tu calificación: " + valor + " estrellas";
+
+}
+
+</script>
+
+</body>
+
+</html>

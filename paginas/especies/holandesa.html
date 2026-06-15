@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Holandesa</title>
+
+    <link rel="stylesheet" href="../../css/ficha.css">
+
+</head>
+
+<body>
+
+    <button class="volver"
+    onclick="window.location.href='../gallinas.html'">
+
+        ← Volver
+
+    </button>
+
+    <div class="tarjeta">
+
+        <div class="hero">
+
+            <img src="../../imagenes/gallinas/holandesa.jpg"
+            alt="Gallina holandesa">
+
+            <div class="overlay">
+
+                <h1>Holandesa</h1>
+
+<div class="calificacion">
+
+    <span class="estrella" onclick="calificar(1)">☆</span>
+    <span class="estrella" onclick="calificar(2)">☆</span>
+    <span class="estrella" onclick="calificar(3)">☆</span>
+    <span class="estrella" onclick="calificar(4)">☆</span>
+    <span class="estrella" onclick="calificar(5)">☆</span>
+
+</div>
+
+<p id="resultado">
+    Califica esta especie
+</p>
+
+            </div>
+
+        </div>
+
+        <div class="info">
+
+            <div class="bloque">
+
+                <h2>🌎 País de origen</h2>
+
+                <p>
+                Países Bajos (Holanda).                </p>
+
+            </div>
+
+            <div class="bloque">
+
+                <h2>📖 Historia</h2>
+
+                <p>
+                Las gallinas holandesas ornamentales fueron desarrolladas
+                    en los Países Bajos principalmente como aves decorativas y
+                    de exhibición. Son muy apreciadas por su elegancia, su
+                    comportamiento tranquilo y la belleza de su cresta.
+                </p>
+
+            </div>
+
+            <div class="bloque">
+
+                <h2>✨ Datos curiosos</h2>
+
+                <ul>
+
+                    <li>
+                    Son gallinas pequeñas, ideales para exhibiciones y
+                        colecciones ornamentales. 
+                    </li>
+
+                    <li>
+                    Tienen un carácter dócil y suelen acostumbrarse
+                        fácilmente al contacto con las personas.
+                    </li>
+
+                </ul>
+
+            </div>
+               <h2>📸 Ejemplares de nuestra granja</h2>
+
+    <div class="galeria">
+
+        <img src="../../imagenes/galeria/holandesa/holandesa1.jpg"
+        alt="holandesa 1">
+
+        <img src="../../imagenes/galeria/holandesa/holandesa2.jpg"
+        alt="holandesa 2">
+
+        <img src="../../imagenes/galeria/holandesa/holandesa3.jpg"
+        alt="holandesa 3">
+
+        <img src="../../imagenes/galeria/holandesa/holandesa4.jpg"
+        alt="holandesa 4">
+
+    </div>
+
+</div>             
+
+            <div class="bloque">
+
+                <h2>⭐ Calificación de visitantes</h2>
+
+                <div class="estrellas">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <p>
+                    Esta especie es una de las favoritas de los visitantes de
+                    La Granja de Gregori.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+
+function calificar(valor){
+
+    const estrellas = document.querySelectorAll('.estrella');
+
+    estrellas.forEach((estrella,index)=>{
+
+        if(index < valor){
+
+            estrella.textContent = '★';
+
+        }else{
+
+            estrella.textContent = '☆';
+
+        }
+
+    });
+
+    document.getElementById("resultado").innerText =
+    "Tu calificación: " + valor + " estrellas";
+
+}
+
+</script>
+
+</body>
+
+</html>

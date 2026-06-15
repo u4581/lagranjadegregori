@@ -1,0 +1,219 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    background:linear-gradient(
+        180deg,
+        #29512d 0%,
+        #3b6b40 35%,
+        #f4efe6 35%,
+        #f4efe6 100%
+    );
+
+    padding:20px;
+}
+
+/* ========================= */
+/* CONTENEDOR ANIMACIÓN */
+/* ========================= */
+
+.fade-in{
+    animation:fadeIn 0.8s ease;
+}
+
+/* ========================= */
+/* ENCABEZADO */
+/* ========================= */
+
+.contenedor{
+
+    max-width:900px;
+    margin:auto;
+}
+
+.encabezado{
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:25px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+
+    margin-bottom:25px;
+    margin-top:80px;
+}
+
+/* animación encabezado */
+.slide-down{
+    animation:slideDown 0.8s ease;
+}
+
+/* botón volver */
+.volver{
+
+    width:auto;
+
+    padding:10px 20px;
+
+    margin-bottom:20px;
+
+    background:#29512d;
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.volver:hover{
+    transform:scale(1.05);
+}
+
+h1{
+    color:#29512d;
+    margin-bottom:10px;
+}
+
+p{
+    color:#666;
+}
+
+/* ========================= */
+/* GRID */
+/* ========================= */
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+}
+
+/* ========================= */
+/* TARJETAS */
+/* ========================= */
+
+.categoria{
+
+    background:white;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    box-shadow:0 10px 20px rgba(0,0,0,0.12);
+
+    transition:0.3s;
+
+}
+
+/* hover */
+.categoria:hover{
+    transform:translateY(-8px) scale(1.02);
+}
+
+/* imágenes */
+.categoria img{
+
+    width:100%;
+
+    height:180px;
+
+    object-fit:cover;
+
+    object-position:center top;
+}
+
+.categoria h2{
+
+    text-align:center;
+
+    padding:18px;
+
+    color:#29512d;
+
+    font-size:20px;
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media(max-width:768px){
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+}
+
+/* ========================= */
+/* ANIMACIONES */
+/* ========================= */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+@keyframes slideDown{
+    from{
+        opacity:0;
+        transform:translateY(-30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* animación escalonada de tarjetas */
+.categoria{
+
+    background:white;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 10px 20px rgba(0,0,0,0.12);
+
+    transition:all 0.3s ease;
+}
+
+.categoria:hover{
+
+    transform:
+    translateY(-8px)
+    scale(1.03);
+
+    box-shadow:
+    0 15px 30px rgba(0,0,0,0.18);
+}
+
